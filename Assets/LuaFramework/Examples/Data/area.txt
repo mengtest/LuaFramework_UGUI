@@ -1,0 +1,8 @@
+﻿区域ID,区域名字,副本名字,副本图标,副本所在表,副本场景
+id,areaName,scriptName,scriptIcon,scriptTable,scriptScene
+1,区域一,格林之森,c1,Data/battle_001,battle
+2,区域一,天空之城,c2,Data/battle_002,battle
+3,区域一,王之遗迹,c3,Data/battle_003,battle
+4,区域二,机械牛,d1,Data/battle_004,battle
+5,区域二,雪山,d2,Data/battle_005,battle
+6,区域二,天界,d3,Data/battle_006,battle

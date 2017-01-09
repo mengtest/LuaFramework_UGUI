@@ -1,0 +1,65 @@
+--SelectTranScriptPanel.lua
+
+require "Logic/UITranScript"
+require "Common/define"
+require "UnityEngine/Vector2"
+require "Controller/SelectTranScriptCtrl"
+
+local gameObject;
+local transform;
+
+SelectTranScriptPanel = {};
+local this = SelectTranScriptPanel;
+local SelectTranScriptCtrl=SelectTranScriptCtrl.New();
+
+function SelectTranScriptPanel.Awake(obj)
+    this.CreatePanel();
+end
+
+function SelectTranScriptPanel.Start(obj)
+	
+end
+
+function SelectTranScriptPanel.CreatePanel()
+	resMgr:LoadPrefab('selecttranscript',{'_selectTranScriptPanel'},this.OnLoadFinish);
+end
+
+function SelectTranScriptPanel.OnLoadFinish(objs)
+	local go=GameObject.Instantiate(objs[0]);
+
+	gameObject = go;
+	transform = go.transform;	
+	
+	local parent=GameObject.Find("Canvas");
+	go.transform:SetParent(parent.transform);
+	go.transform:GetComponent("RectTransform").anchoredPosition = Vector2.New(0,0);
+	go.transform:GetComponent("RectTransform").sizeDelta = Vector2.New(0,0);
+	go.transform:GetComponent("RectTransform").localScale = Vector3.New(1,1,1);
+	
+	Util.Log("Finish");
+	
+	this.InitPanel();
+
+end
+
+function SelectTranScriptPanel.InitPanel()
+	--this.btnClose = transform:FindChild("Close").gameObject;
+	--此时key默认从1开始递增
+	SelectTranScriptPanel.Sprites = 
+	{
+		UITranScript:new(transform:FindChild("panel/TranScript").gameObject,0),
+		UITranScript:new(transform:FindChild("panel/TranScript2").gameObject,0),
+		UITranScript:new(transform:FindChild("panel/TranScript3").gameObject,0),
+		UITranScript:new(transform:FindChild("panel/TranScript4").gameObject,0),
+		UITranScript:new(transform:FindChild("panel/TranScript5").gameObject,0),
+		UITranScript:new(transform:FindChild("panel/TranScript6").gameObject,0),
+	}
+	
+	SelectTranScriptCtrl.OnCreate(gameObject);
+
+end
+
+
+function SelectTranScriptPanel.OnDestroy()
+
+end

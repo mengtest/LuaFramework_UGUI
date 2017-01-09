@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 3340593618
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d7bf63a4a12d3843c917edf00ad94007
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9dea23ffc7e96552740e12d1ee5309d8
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/LuaFramework/Examples/Textures/SelectTranScript/d2.png
+- Assets/LuaFramework/Examples/Textures/SelectTranScript/c2.png
+- Assets/LuaFramework/Examples/Textures/SelectTranScript/d3.png
+- Assets/LuaFramework/Examples/Textures/SelectTranScript/c3.png
+- Assets/LuaFramework/Examples/Textures/SelectTranScript/d1.png
+- Assets/LuaFramework/Examples/Textures/SelectTranScript/c1.png
+Dependencies: []
