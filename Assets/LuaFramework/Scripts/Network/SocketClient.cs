@@ -14,12 +14,21 @@ public enum DisType {
 
 public class SocketClient {
     private TcpClient client = null;
+    /// <summary>
+    /// 负责输出
+    /// </summary>
     private NetworkStream outStream = null;
-    private MemoryStream memStream;
-    private BinaryReader reader;
+    /// <summary>
+    /// 辅助接收，存储所以接收到的信息
+    /// </summary>
+    private MemoryStream memStream; 
+    /// <summary>
+    /// 对MemoryStream中的信息进行读取
+    /// </summary>
+    private BinaryReader reader; 
 
     private const int MAX_READ = 8192;
-    private byte[] byteBuffer = new byte[MAX_READ];
+    private byte[] byteBuffer = new byte[MAX_READ]; //暂存接收到的信息
     public static bool loggedIn = false;
 
     // Use this for initialization

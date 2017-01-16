@@ -18,13 +18,14 @@ public class AccessingEnum : MonoBehaviour
                 if not space:Equals(0) then
                     print('enum compare int is ok')                
                 end
-
+print(space)
+print(e)
                 if space == e then
                     print('enum compare enum is ok')
                 end
 
                 local s = UnityEngine.Space.IntToEnum(0)
-
+print(s)
                 if space == s then
                     print('IntToEnum change type is ok')
                 end

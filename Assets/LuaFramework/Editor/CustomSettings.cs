@@ -157,7 +157,39 @@ public static class CustomSettings
         _GT(typeof(TimerManager)),
         _GT(typeof(ThreadManager)),
         _GT(typeof(NetworkManager)),
-        _GT(typeof(ResourceManager)),		  
+        _GT(typeof(ResourceManager)),
+
+
+        _GT(typeof(DG.Tweening.AutoPlay)),
+        _GT(typeof(DG.Tweening.AxisConstraint)),
+        _GT(typeof(DG.Tweening.Ease)),
+        _GT(typeof(DG.Tweening.LogBehaviour)),
+        _GT(typeof(DG.Tweening.LoopType)),
+        _GT(typeof(DG.Tweening.PathMode)),
+        _GT(typeof(DG.Tweening.PathType)),
+        _GT(typeof(DG.Tweening.RotateMode)),
+        _GT(typeof(DG.Tweening.ScrambleMode)),
+        _GT(typeof(DG.Tweening.TweenType)),
+        _GT(typeof(DG.Tweening.UpdateType)),
+
+        _GT(typeof(DG.Tweening.DOTween)),
+        _GT(typeof(DG.Tweening.DOVirtual)),
+        _GT(typeof(DG.Tweening.EaseFactory)),
+        _GT(typeof(DG.Tweening.Tweener)),
+        _GT(typeof(DG.Tweening.Tween)),
+        _GT(typeof(DG.Tweening.Sequence)),
+        _GT(typeof(DG.Tweening.TweenParams)),
+
+        _GT(typeof(DG.Tweening.DOTweenAnimation)),
+        _GT(typeof(DG.Tweening.DOTweenPath)),
+        _GT(typeof(DG.Tweening.DOTweenVisualManager)),
+        _GT(typeof(DG.Tweening.Core.ABSSequentiable)),
+        //以后注意遇到泛指类型的要指明类型导出。
+        _GT(typeof(DG.Tweening.Core.TweenerCore<Vector3, Vector3, DG.Tweening.Plugins.Options.VectorOptions>)).SetWrapName("TweenerCoreV3V3VO").SetLibName("TweenerCoreV3V3VO"),
+
+
+        _GT(typeof(MTimerManager)),
+
     };
 
     public static List<Type> dynamicList = new List<Type>()
